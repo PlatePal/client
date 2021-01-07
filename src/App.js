@@ -1,4 +1,3 @@
-import "./App.css";
 import CreateAccountPage from "./Containers/Pages/CreateAccount/CreateAccount";
 import LoginPage from "./Containers/Pages/Login";
 import LogoPage from "./Containers/Pages/Logo";
