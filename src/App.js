@@ -1,6 +1,6 @@
 import CreateAccountPage from "./Containers/Pages/CreateAccount/CreateAccount";
-import LoginPage from "./Containers/Pages/Login";
-import LogoPage from "./Containers/Pages/Logo";
+import LoginPage from "./Containers/Pages/Login/Login";
+import LogoPage from "./Containers/Pages/Logo/Logo";
 import { Route, Switch } from "react-router-dom";
 function App() {
   return (
