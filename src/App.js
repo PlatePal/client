@@ -7,10 +7,10 @@ function App() {
   return (
     <div>
       <Switch>
-        {/* <Route path="/create" component={CreateAccountPage} />
-        <Route path="/login" component={LoginPage} /> */}
-        {/* <Route path="/" exact component={LogoPage} /> */}
-        <Route path="/" exact component={MetricPage} />
+        <Route path="/create" component={CreateAccountPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/" exact component={LogoPage} />
+        <Route path="/metric" exact component={MetricPage} />
       </Switch>
     </div>
   );
