@@ -1,16 +1,21 @@
 import React, {useState} from 'react';
 import './Login.css';
 import logo from "./googleicon.png";
+import firebase from '../../../firebase'
+  
+//   import { config } from "./test-credentials";
 
 class Login extends React.Component {
-unin
+
+    // not used for now
     state = {
         signedIn: false,
         user: null,
-
     }
 
     googleSignIn () {
+        const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(googleAuthProvider);
         console.log("Google Sign In Page");
     }
 
