@@ -1,11 +1,11 @@
 import firebase from 'firebase'
 const firebaseConfig = {
-    apiKey: process.env,
-    authDomain: "platepal.firebaseapp.com",
-    projectId: "platepal",
-    storageBucket: "platepal.appspot.com",
-    messagingSenderId: "989624818914",
-    appId: "1:989624818914:web:32dd13ed6cc8e0e6d092bb"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH,
+    projectId: process.env.REACT_APP_PROJ_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESS_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
   };
 firebase.initializeApp(firebaseConfig);
 export default firebase;
