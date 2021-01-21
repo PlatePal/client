@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 const firebaseConfig = {
-    apiKey: "AIzaSyDaYBnf8ScKqVEp-J-9gNlIjUb-LBqyl2w",
+    apiKey: process.env,
     authDomain: "platepal.firebaseapp.com",
     projectId: "platepal",
     storageBucket: "platepal.appspot.com",

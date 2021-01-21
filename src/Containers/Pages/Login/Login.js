@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Login.css';
+import styles from './Login.module.css';
 import logo from "./googleicon.png";
 import firebase from '../../../firebase'
   
@@ -20,18 +20,18 @@ class Login extends React.Component {
     }
 
     helpNeeded () {
-        console.log("Help is needed");
+        //TODO: go to the help page (if there is one)
     }
 
     render () {
         return(
-            <div className="loginComponent">
-                <h1 className="loginTitle">Login</h1>
-                <p className="loginParagraph">Welcome Back</p>
-                <p className="loginParagraph">Sign in to continue</p>
-                <img className="loginLogo" src={logo} alt="Google Logo"></img>
-                <button className="loginButton" onClick={this.googleSignIn}>Sign in with Google</button>
-                <p className="loginParagraphOrange" onClick={this.helpNeeded}>Need Help?</p>
+            <div className={styles.loginComponent}>
+                <h1 className={styles.loginTitle}>Login</h1>
+                <p className={styles.loginParagraph}>Welcome Back</p>
+                <p className={styles.loginParagraph}>Sign in to continue</p>
+                <img className={styles.loginLogo} src={logo} alt="Google Logo"></img>
+                <button className={styles.loginButton} onClick={this.googleSignIn}>Sign in with Google</button>
+                <p className={styles.loginParagraphOrange} onClick={this.helpNeeded}>Need Help?</p>
             </div>
         );
     }
