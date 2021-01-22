@@ -1,0 +1,181 @@
+.ingredient-base{
+    position: relative;
+    width: 375px;
+    height: 990px;
+
+    /* white */
+
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    
+}
+#title{
+    position: relative;
+    width: 319px;
+    height: 82px;
+    left: 36px;
+    top: 100px;
+    
+    /* Rubik */
+    
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+    /* or 121% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.374px;
+    
+    color: #000000;
+    
+}
+
+#subtitle{
+
+    position: relative;
+    width: 101px;
+    height: 22px;
+    left: 38px;
+    top: 55px;
+
+    /* Karla */
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height, or 147% */
+
+    text-align: center;
+    letter-spacing: -0.408px;
+
+    /* Red */
+
+    color: #DB5A42;
+}
+.sections{
+    position: relative;
+    left: 38px;
+    width: 319px;
+    margin-top: 30px;
+}
+
+
+.dairy-section, .vegetables-section, .bakinggrains-section {
+    position: relative;
+    width: 319px;
+    height: 100px;
+    
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+#section{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+}
+
+.dairy-btn{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3px;
+    
+    align-content: space-between;
+    font-family: 'Karla';
+    
+}
+.btns{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    border: none;
+    outline: none;
+    background: #E5E5E5;;
+    border-radius: 15px;
+}
+.btns:hover{
+    background: #f5bb47;
+}
+
+#btn-text{
+    height: 26px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: -0.408px;
+
+}
+
+.next-btn{
+
+    position: relative;
+    width: 375px;
+    margin-top: 60px;
+    left: 0px;
+    bottom: 0px;
+    
+    background: #FFFFFF;
+}
+#next{
+    position: relative;
+    width: 289px;
+    height: 59px;
+    /* Red */
+    border: none;
+    background: #DB5A42;
+    outline:none;
+    
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.408px;
+    /* Roboto */
+    transition: all 0.5s;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+#next span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+      
+#next span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+      
+#next:hover span {
+        padding-right: 25px;
+}
+      
+#next:hover span:after {
+        opacity: 1;
+        right: 0;
+}
