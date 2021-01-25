@@ -22,30 +22,32 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Switch>
-        <Route path="/create" component={CreateAccountPage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/metric" exact component={MetricPage} />
-        <Route
-          path="/dietaryrestrictions"
-          exact
-          component={DietaryRestrictions}
-        />
-        <Route
-          path="/mainrecipe"
-          render={(props) => (
-            <MainRecipeModal
-              name="Creamy Watermelon Smoothie"
-              percentage="87%"
-              price="$"
-              img={smoothie}
-            />
-          )}
-        />
-      </Switch>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Switch>
+          <Route path="/create" component={CreateAccountPage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/metric" exact component={MetricPage} />
+          <Route
+            path="/dietaryrestrictions"
+            exact
+            component={DietaryRestrictions}
+          />
+          <Route
+            path="/mainrecipe"
+            render={(props) => (
+              <MainRecipeModal
+                name="Creamy Watermelon Smoothie"
+                percentage="87%"
+                price="$"
+                img={smoothie}
+              />
+            )}
+          />
+        </Switch>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
