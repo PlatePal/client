@@ -77,12 +77,19 @@
 
 
 }
+.icon-section{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
 #section{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
     line-height: 22px;
+    margin-left: 5px;
     /* identical to box height, or 129% */
 
     letter-spacing: -0.408px;
@@ -108,7 +115,7 @@
     margin-bottom: 3px;
     border: none;
     outline: none;
-    background: #E5E5E5;;
+    background: #E5E5E5;
     border-radius: 15px;
 }
 .btns:hover{

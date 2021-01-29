@@ -1,6 +1,10 @@
 import './selectIngredientStyle.css'
+import DairyIcon from './icons/dairyIcon.svg'
+import VegetableIcon from './icons/vegetableIcon.svg'
+import BakingIcon from './icons/bakingIcon.svg'
 import React from 'react'
 import Button from './Button'
+import { findByLabelText } from '@testing-library/react'
 
 function DairySection(){
     const dairySelection = [
@@ -146,17 +150,26 @@ function Ingredient(props){
 
             <div className="sections">
                 <div className="dairy-section">
-                    <p id="section">{props.section1}</p>
+                    <div className='icon-section'>
+                        <img src={DairyIcon} alt="DairyIcon"/>
+                        <p id="section">{props.section1}</p>
+                    </div>
                     <DairySection />
                 </div>
 
                 <div className="vegetables-section">
-                    <p id="section">{props.section2}</p>
+                    <div className='icon-section'>
+                        <img src={VegetableIcon} alt="VegetableIcon"/>
+                        <p id="section">{props.section2}</p>
+                    </div>
                     <VegetablesSection />
                 </div>
 
                 <div className="bakinggrains-section">
-                    <p id="section">{props.section3}</p>
+                    <div className='icon-section'>
+                        <img src={BakingIcon} alt="BakingIcon"/>
+                        <p id="section">{props.section3}</p>
+                    </div>
                     <BakingGrainsSection />
                 </div>
 
