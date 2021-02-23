@@ -8,6 +8,7 @@ import DietaryRestrictions from "./Containers/Pages/DietaryRestrictions/DietaryR
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import MainRecipeModal from "./Containers/Pages/MainRecipeModal/MainRecipeModal";
 import smoothie from "./Containers/Pages/MainRecipeModal/Creamy-Watermelon-Smoothie.jpg";
+import ExpandedRecipe from './Containers/Pages/ExpandedRecipe/ExpandedRecipe.js';
 
 const theme = createMuiTheme({
   palette: {
@@ -45,6 +46,7 @@ function App() {
               />
             )}
           />
+          <Route path="/expandedrecipe" component={ExpandedRecipe} />
         </Switch>
       </ThemeProvider>
     </BrowserRouter>
