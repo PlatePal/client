@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from './Login.module.css';
-import logo from "./googleicon.png";
-import firebase from '../../../firebase'
+import logo from "../../../assets/images/googleicon.png";
+import firebase from './../../../firebase';
   
 //   import { config } from "./test-credentials";
 
