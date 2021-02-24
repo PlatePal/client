@@ -81,6 +81,10 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateZ(0)',
     paddingLeft: '1em'
   },
+  gridTile: {
+    width: '25% !important',
+    height: '25% !important'
+  },
   ingredientImage: {
     height: '5em',
     width: '5em',
@@ -89,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   ingredientText: {
     textAlign: 'center',
     marginBlockStart: 0,
-    fontSize: '0.8em'
+    fontSize: '0.8em',
   }
 }));
 export { useStyles };
