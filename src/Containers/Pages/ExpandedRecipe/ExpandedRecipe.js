@@ -20,43 +20,43 @@ const ingredientData = [
 ]
 
 const ExpandedRecipe = () => {
-    const styles = useStyles();
+    const classes = useStyles();
     return (
         <>
-            <Box className={styles.navBar}></Box>
-            {/* added this as a palceholder for the nav bar */}
+            <Box className={classes.navBar}></Box>
+            {/* added this as a placeholder for the nav bar */}
             <Grid>
-                <h1 item className={styles.recipeName}> Creamy Watermelon Smoothie</h1>
+                <h1 item className={classes.recipeName}> Creamy Watermelon Smoothie</h1>
             </Grid>
-            <Grid className={styles.recipeInfo}>
-                <img item className= {styles.photo} src={recipeImage} alt='recipe image'/>
-                <Box container className={styles.informationBox}>
-                    <Grid container item className={styles.timeContainer}> 
-                        <AccessTimeIcon item className={styles.icon}/>
+            <Grid className={classes.recipeInfo}>
+                <img item className= {classes.photo} src={recipeImage} alt='recipe image'/>
+                <Box container className={classes.informationBox}>
+                    <Grid container item className={classes.timeContainer}> 
+                        <AccessTimeIcon item className={classes.icon}/>
                         <p item>5 mins</p>
                     </Grid>
-                    <Grid item className={styles.costContainer}>
-                        <p item className={styles.cost}>$</p>
+                    <Grid item className={classes.costContainer}>
+                        <p item className={classes.cost}>$</p>
                     </Grid>
-                    <Grid item className={styles.difficultyContainer}>
-                        <p item className={styles.difficultyHeader}>Difficulty:</p>
+                    <Grid item className={classes.difficultyContainer}>
+                        <p item className={classes.difficultyHeader}>Difficulty:</p>
                         <p item>Easy</p>
                     </Grid>
                 </Box>
             </Grid>
             <Grid>
-                <h3 className={styles.description}>A blend of frozen watermelon cubes, strawberries, and yogurt, with the optional addition of mint or basil 
+                <h3 className={classes.description}>A blend of frozen watermelon cubes, strawberries, and yogurt, with the optional addition of mint or basil 
                     if you feel so inclined, this pink drink is the grown-up equivalent of zipping down a Slip-n-Slide or drinking cold water right from the 
                     hose on the hottest day as a kid: utter exhilaration.</h3>
             </Grid>
             <Grid>
-                <h2 className={styles.ingredientHeader}>Ingredients (6):</h2>
-                <div className={styles.ingredientList}>
-                    <GridList className={styles.gridList}>
+                <h2 className={classes.ingredientHeader}>Ingredients (6):</h2>
+                <div className={classes.ingredientList}>
+                    <GridList className={classes.gridList}>
                         {ingredientData.map((tile) => (
-                            <img item src={tile.img} alt={tile.title} className={styles.ingredientImage}/>
-                            <p item className={styles.ingredientText}>{tile.title}</p>
                         <GridListTile container className={classes.gridTile} key={tile.img}>
+                            <img item src={tile.img} alt={tile.title} className={classes.ingredientImage}/>
+                            <p item className={classes.ingredientText}>{tile.title}</p>
                         </GridListTile>
                         ))}
                     </GridList>
