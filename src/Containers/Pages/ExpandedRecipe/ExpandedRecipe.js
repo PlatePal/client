@@ -54,9 +54,9 @@ const ExpandedRecipe = () => {
                 <div className={styles.ingredientList}>
                     <GridList className={styles.gridList}>
                         {ingredientData.map((tile) => (
-                        <GridListTile container style={{width: '25%'}} key={tile.img}>
                             <img item src={tile.img} alt={tile.title} className={styles.ingredientImage}/>
                             <p item className={styles.ingredientText}>{tile.title}</p>
+                        <GridListTile container className={classes.gridTile} key={tile.img}>
                         </GridListTile>
                         ))}
                     </GridList>
