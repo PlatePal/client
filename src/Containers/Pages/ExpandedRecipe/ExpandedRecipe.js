@@ -1,14 +1,14 @@
 import React from 'react';
-import {Grid, Container, Box, GridList, GridListTile} from '@material-ui/core';
-import {useStyles} from './styles.js';
+import {Grid, Box, GridList, GridListTile} from '@material-ui/core';
+import {useStyles} from '../../../assets/styles/expandedRecipeClasses.js';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import recipeImage from './images/Creamy-Watermelon-Smoothie.jpg';
-import watermelon from './images/watermelon.jpg';
-import honey from './images/honey.jpg';
-import milk from './images/milk.jpg';
-import strawberries from './images/strawberries copy.jpg';
-import mint from './images/mint-leaves-isolated-white-background_33736-2879.jpg';
-import yogurt from './images/yogurt.jpg';
+import recipeImage from '../../../assets/images/Creamy-Watermelon-Smoothie.jpg';
+import watermelon from '../../../assets/images/watermelon.jpg';
+import honey from '../../../assets/images/honey.jpg';
+import milk from '../../../assets/images/milk.jpg';
+import strawberries from '../../../assets/images/strawberries copy.jpg';
+import mint from '../../../assets/images/mint-leaves-isolated-white-background_33736-2879.jpg';
+import yogurt from '../../../assets/images/yogurt.jpg';
 
 const ingredientData = [
     {img: watermelon, title: 'watermelon'},
