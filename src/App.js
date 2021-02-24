@@ -33,7 +33,7 @@ function App() {
               <MainRecipeModal />
             )}
           />
-          <Route path="/expandedrecipe" component={ExpandedRecipe} />
+          <Route path= {`/${routes.expandedRecipe}`} exact component={ExpandedRecipe} />
         </Switch>
       </ThemeProvider>
     </BrowserRouter>
