@@ -1,8 +1,18 @@
-layout {
+.layout {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0;
   height: 100%;
   width: 100%;
+}
+
+.pageName {
+  padding-left: 1em;
+}
+
+.pageNameFont {
+  font-size: 1.5em;
+  letter-spacing: 0.023375em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
