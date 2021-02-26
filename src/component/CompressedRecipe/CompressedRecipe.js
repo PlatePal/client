@@ -7,7 +7,7 @@ const CompressedRecipe = (props) => {
   return (
     <div className={styles.recipeContainer}>
       <div className={styles.recipeInfoContainer}>
-        <h2 className={styles.recipeName}>{props.recipeName} </h2>
+        <h3 className={styles.recipeName}>{props.recipeName} </h3>
         <div className={styles.recipeQuickSummaryContainer}>
           <CostSummary pricePerServing={props.pricePerServing} />
           <CookingTimeSummary readyInMinutes={props.readyInMinutes} />
