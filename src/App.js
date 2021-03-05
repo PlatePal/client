@@ -5,8 +5,10 @@ import LoginPage from "./Containers/Pages/Login/Login";
 import LandingPage from "./Containers/Pages/LandingPage/LandingPage";
 import MetricPage from "./Containers/Pages/Metrics/Metrics";
 import MainRecipeModal from "./Containers/Pages/MainRecipeModal/MainRecipeModal";
+import ExpandedSavedRecipe from "./Containers/Pages/ExpandedSavedRecipe/ExpandedSavedRecipe.js"
 import ExpandedRecipe from './Containers/Pages/ExpandedRecipe/ExpandedRecipe.js';
 import IngredientSelection from './Containers/Pages/IngredientSelection/IngredientSelection.js';
+
 
 import {ThemeProvider } from "@material-ui/core";
 import mainUITheme from "./assets/styles/mainUITheme"
@@ -34,6 +36,7 @@ function App() {
               <MainRecipeModal />
             )}
           />
+          <Route path= {`/${routes.expandedSavedRecipe}`} exact component={ExpandedSavedRecipe} />
           <Route path= {`/${routes.expandedRecipe}`} exact component={ExpandedRecipe} />
           <Route path= {`/${routes.ingredientSelection}`} exact component={IngredientSelection} />
         </Switch>
