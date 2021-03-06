@@ -3,11 +3,7 @@ import styles from './LogoutBtn.module.scss';
 
 const LogoutBtn = (props) => {
   return (
-    <button
-      className={styles.LogoutBtn}
-      style={props.style}
-      onClick={props.onClick}
-    >
+    <button className={styles.LogoutBtn} onClick={props.onClick}>
       LOGOUT
     </button>
   );
