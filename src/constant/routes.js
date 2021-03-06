@@ -1,6 +1,7 @@
 const routes = {
   login: 'login',
   main: 'main',
+  profile: 'profile',
 
   // User preference related
   dietaryRestriction: 'dietaryRestriction',
@@ -8,8 +9,6 @@ const routes = {
   expandedRecipe: 'expandedRecipe',
   ingredientSelection: 'ingredientSelection',
   expandedSavedRecipe: 'expandedSavedRecipe',
-
-  profile: 'profile',
 };
 
 export default routes;
