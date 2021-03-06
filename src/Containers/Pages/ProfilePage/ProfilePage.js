@@ -18,7 +18,6 @@ const ProfilePage = (props) => {
     getPreferences().then(
       (data) => {
         dataItem = data.val();
-        console.log(dataItem);
         setUserPreferences((prevState) => {
           return {
             ...prevState,
