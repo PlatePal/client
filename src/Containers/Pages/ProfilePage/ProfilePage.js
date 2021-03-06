@@ -34,6 +34,10 @@ const ProfilePage = (props) => {
     );
   }, []);
 
+  const logoutHandler = () => {
+    props.history.push('/');
+  };
+
   return (
     <div className={styles.profilePageContainer}>
       <div className={styles.profilePictureContainer}>
@@ -56,7 +60,7 @@ const ProfilePage = (props) => {
         />
         <ProfileMetricInfo preferenceArr={userPreferences.metric} />
       </div>
-      <LogoutBtn style={{ marginTop: '25px' }} />
+      <LogoutBtn onClick={() => logoutHandler()} />
     </div>
   );
 };

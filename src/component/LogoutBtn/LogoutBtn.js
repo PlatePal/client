@@ -1,10 +1,13 @@
-import { PinDropSharp } from '@material-ui/icons';
 import React from 'react';
 import styles from './LogoutBtn.module.scss';
 
 const LogoutBtn = (props) => {
   return (
-    <button className={styles.LogoutBtn} style={props.style}>
+    <button
+      className={styles.LogoutBtn}
+      style={props.style}
+      onClick={props.onClick}
+    >
       LOGOUT
     </button>
   );

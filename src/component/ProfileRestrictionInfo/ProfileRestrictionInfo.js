@@ -17,7 +17,7 @@ const ProfileRestrictionInfo = (props) => {
           );
         })}
         <li key='addMore'>
-          <img src={add_button} alt='+'></img>
+          <img src={add_button} alt='plus symbol'></img>
         </li>
       </ul>
     </div>
