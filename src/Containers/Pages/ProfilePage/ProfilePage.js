@@ -5,6 +5,7 @@ import profilePageImg from '../../../assets/images/profilepagepicture.png';
 import ProfileRestrictionInfo from '../../../component/ProfileRestrictionInfo/ProfileRestrictionInfo.js';
 import { getPreferences } from '../../../utilities/firebase/index.js';
 import LogoutBtn from '../../../component/LogoutBtn/LogoutBtn.js';
+import ProfileMetricInfo from '../../../component/ProfileMetricInfo/ProfileMetricInfo.js';
 
 const ProfilePage = (props) => {
   const initialState = {
@@ -53,11 +54,7 @@ const ProfilePage = (props) => {
           preferenceTitle='Diet'
           preferenceArr={userPreferences.diet}
         />
-        <h3 className={styles.preferenceType}>Unit System</h3>
-        <ProfileRestrictionInfo
-          preferenceTitle='Diet'
-          preferenceArr={userPreferences.metric}
-        />
+        <ProfileMetricInfo preferenceArr={userPreferences.metric} />
       </div>
       <LogoutBtn style={{ marginTop: '25px' }} />
     </div>
