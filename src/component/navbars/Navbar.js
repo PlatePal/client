@@ -32,11 +32,11 @@ const Navbar = (props) => {
         <NavItem image={menu} route={routes.metrics} />
       </div>
       <div className={styles.bottomNavContainer}>
-        <NavItem image={checkPage("home") || home} route={routes.login} />
-        <NavItem image={checkPage("heart") || heart} route={routes.main} />
+        <NavItem image={checkPage("home") || home} route={routes.main} />
+        <NavItem image={checkPage("heart") || heart} route={routes.favorite} />
         <NavItem
           image={checkPage("bookmark") || bookmark}
-          route={routes.favorite}
+          route={routes.today}
         />
         <NavItem image={checkPage("person") || person} route={routes.profile} />
       </div>
