@@ -46,7 +46,6 @@ class MainRecipeModal extends React.Component {
   }
 
   updateRecipe(response) {
-    console.log(response.data.recipes);
     this.setState((prevState) => {
       return {
         spoonacularRecipe: response.data.recipes[this.state.recipeCount],
