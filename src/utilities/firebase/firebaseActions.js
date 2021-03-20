@@ -140,4 +140,11 @@ export const saveRecipe = (recipe, title) => {
         }
       );
   });
+export const getTodayRecipe = () => {
+  var currentU = authenticateUser();
+
+  return firebase
+    .database()
+    .ref(`userID/${currentU}/${constants.todayRecipe}`)
+    .get();
 };

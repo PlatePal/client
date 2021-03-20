@@ -10,6 +10,7 @@ import ExpandedRecipe from "./Containers/Pages/ExpandedRecipe/ExpandedRecipe.js"
 import IngredientSelection from "./Containers/Pages/IngredientSelection/IngredientSelection.js";
 import ProfilePage from "./Containers/Pages/ProfilePage/ProfilePage.js";
 import AdjustOptions from "./Containers/Pages/AdjustOptions/AdjustOptions.js";
+import TodaysRecipe from "./Containers/Pages/TodaysRecipe/TodaysRecipe";
 
 import { ThemeProvider } from "@material-ui/core";
 import mainUITheme from "./assets/styles/mainUITheme";
@@ -52,6 +53,15 @@ function App() {
               <div>
                 <Navbar fill="home" />
                 <MainRecipeModal />
+              </div>
+            )}
+          />
+          <Route
+            path={`/${routes.today}`}
+            render={(props) => (
+              <div>
+                <Navbar fill="bookmark" />
+                <TodaysRecipe />
               </div>
             )}
           />

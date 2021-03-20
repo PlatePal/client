@@ -7,8 +7,14 @@ import filledFavoriteBtn from "../../assets/images/favorite_filled_24px.svg";
 import { saveRecipe } from "../../utilities/firebase/firebaseActions";
 const CompressedRecipe = (props) => {
   const [selected, setSelected] = useState(false);
+
+const CompressedRecipe = (props) => {
+  const containerClass = props.superLiked
+    ? styles.recipeContainerSuperLiked
+    : styles.recipeContainer;
+  
   return (
-    <div className={styles.recipeContainer}>
+    <div className={containerClass}>
       <div className={styles.recipeInfoContainer}>
         <h3 className={styles.recipeName}>{props.recipeName} </h3>
         <div className={styles.recipeQuickSummaryContainer}>
