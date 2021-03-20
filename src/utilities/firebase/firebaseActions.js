@@ -140,6 +140,8 @@ export const saveRecipe = (recipe, title) => {
         }
       );
   });
+};
+
 export const getTodayRecipe = () => {
   var currentU = authenticateUser();
 

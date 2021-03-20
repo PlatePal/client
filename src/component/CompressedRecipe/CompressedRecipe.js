@@ -5,14 +5,13 @@ import CookingTimeSummary from "./QuickSummaryItems/CookingTimeSummary/CookingTi
 import favoriteBtn from "../../assets/images/favorite_24px.svg";
 import filledFavoriteBtn from "../../assets/images/favorite_filled_24px.svg";
 import { saveRecipe } from "../../utilities/firebase/firebaseActions";
-const CompressedRecipe = (props) => {
-  const [selected, setSelected] = useState(false);
 
 const CompressedRecipe = (props) => {
+  const [selected, setSelected] = useState(false);
   const containerClass = props.superLiked
     ? styles.recipeContainerSuperLiked
     : styles.recipeContainer;
-  
+
   return (
     <div className={containerClass}>
       <div className={styles.recipeInfoContainer}>
