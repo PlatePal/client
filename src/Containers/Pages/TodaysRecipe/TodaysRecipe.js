@@ -16,7 +16,6 @@ class TodaysRecipe extends React.Component {
     // Call firebase API to retreive entries
     getTodayRecipe().then((res) => {
       const { liked, superliked } = res.val().Timestamp;
-
       this.setState(
         {
           todayRecipeId: {
@@ -56,7 +55,6 @@ class TodaysRecipe extends React.Component {
                   this.state.superlikedRecipe.push(newObj);
                 }
               });
-
               this.setState({ loading: false });
             });
         }
@@ -88,6 +86,7 @@ class TodaysRecipe extends React.Component {
     const superLiked = this.state.superlikedRecipe.map((item) => {
       return (
         <CompressedRecipe
+          superLiked={true}
           recipeName={item.title}
           pricePerServing={item.pricePerServing}
           readyInMinutes={item.readyInMinutes}
@@ -95,7 +94,7 @@ class TodaysRecipe extends React.Component {
         />
       );
     });
-    const compressedRecipeCollection = liked.concat(superLiked);
+    const compressedRecipeCollection = superLiked.concat(liked);
     return compressedRecipeCollection;
   }
 

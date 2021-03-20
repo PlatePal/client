@@ -4,8 +4,11 @@ import CostSummary from "./QuickSummaryItems/CostSummary/CostSummary.js";
 import CookingTimeSummary from "./QuickSummaryItems/CookingTimeSummary/CookingTimeSummary.js";
 
 const CompressedRecipe = (props) => {
+  const containerClass = props.superLiked
+    ? styles.recipeContainerSuperLiked
+    : styles.recipeContainer;
   return (
-    <div className={styles.recipeContainer}>
+    <div className={containerClass}>
       <div className={styles.recipeInfoContainer}>
         <h3 className={styles.recipeName}>{props.recipeName} </h3>
         <div className={styles.recipeQuickSummaryContainer}>
