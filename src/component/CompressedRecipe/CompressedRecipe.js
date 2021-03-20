@@ -1,9 +1,12 @@
-import React from 'react';
-import styles from './CompressedRecipe.module.scss';
-import CostSummary from './QuickSummaryItems/CostSummary/CostSummary.js';
-import CookingTimeSummary from './QuickSummaryItems/CookingTimeSummary/CookingTimeSummary.js';
-
+import React, { useState } from "react";
+import styles from "./CompressedRecipe.module.scss";
+import CostSummary from "./QuickSummaryItems/CostSummary/CostSummary.js";
+import CookingTimeSummary from "./QuickSummaryItems/CookingTimeSummary/CookingTimeSummary.js";
+import favoriteBtn from "../../assets/images/favorite_24px.svg";
+import filledFavoriteBtn from "../../assets/images/favorite_filled_24px.svg";
+import { saveRecipe } from "../../utilities/firebase/firebaseActions";
 const CompressedRecipe = (props) => {
+  const [selected, setSelected] = useState(false);
   return (
     <div className={styles.recipeContainer}>
       <div className={styles.recipeInfoContainer}>
@@ -11,11 +14,26 @@ const CompressedRecipe = (props) => {
         <div className={styles.recipeQuickSummaryContainer}>
           <CostSummary pricePerServing={props.pricePerServing} />
           <CookingTimeSummary readyInMinutes={props.readyInMinutes} />
-          <CostSummary pricePerServing={props.pricePerServing} />
         </div>
       </div>
       <div className={styles.recipeImageContainer}>
-        <img className={styles.recipeImage} src={props.recipeImageSrc} alt="recipe"></img>
+        <img
+          className={styles.recipeImage}
+          src={props.recipeImageSrc}
+          alt="recipe"
+        />
+        <button
+          className={styles.favoriteBtn}
+          onClick={() => {
+            saveRecipe(props.id, props.recipeName);
+            setSelected(!selected);
+          }}
+        >
+          <img
+            src={selected ? filledFavoriteBtn : favoriteBtn}
+            alt="favorite button"
+          />
+        </button>
       </div>
     </div>
   );
