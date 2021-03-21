@@ -20,9 +20,7 @@ const CompressedRecipe = (props) => {
       className={containerClass}
       onClick={() => {
         props.storeRecipeId(props.id);
-        props.history.push(
-          path.expanded.replace(":{recipeName}", props.recipeName)
-        );
+        props.history.push(path.expanded.replace(":recipe", props.recipeName));
       }}
     >
       <div className={styles.recipeInfoContainer}>

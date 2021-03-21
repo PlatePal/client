@@ -16,6 +16,7 @@ const ExpandedSavedRecipe = (props) => {
       .get(SpoonacularAPI.GET_RECIPE.replace("{id}", props.recipeId), {
         params: {
           apiKey: API_KEY,
+          includeNutrition: false,
         },
       })
       .then((res) => {
@@ -45,7 +46,7 @@ const ExpandedSavedRecipe = (props) => {
           title,
         });
       });
-  });
+  }, []);
   return (
     <>
       {recipeInformation && (

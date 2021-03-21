@@ -20,7 +20,7 @@ const path = {
   diet: `/${routes.app}/${routes.profile}/${routes.diet}`,
   metric: `/${routes.app}/${routes.profile}/${routes.metrics}`,
   saved: `/${routes.app}/${routes.favorite}`,
-  expanded: `/${routes.app}/${routes.expandedRecipe}/:{recipeName}`,
+  expanded: `/${routes.app}/${routes.expandedRecipe}/:recipe`,
   login: `/`,
 };
 
