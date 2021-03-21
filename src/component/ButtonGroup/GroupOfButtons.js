@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     flexGrow: 1,
     borderRadius: "10em",
+    borderColor: "#FFD275",
+    borderStyle: "solid",
+    borderWidth: "1px",
   },
 }));
 
