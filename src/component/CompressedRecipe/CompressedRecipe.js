@@ -8,7 +8,7 @@ import { saveRecipe } from "../../utilities/firebase/firebaseActions";
 import * as reduxActions from "../../store/index";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
-import routes from "../../constant/routes";
+import path from "../../constant/routes";
 const CompressedRecipe = (props) => {
   const [selected, setSelected] = useState(props.isFavorite);
   const containerClass = props.superLiked
@@ -20,7 +20,9 @@ const CompressedRecipe = (props) => {
       className={containerClass}
       onClick={() => {
         props.storeRecipeId(props.id);
-        props.history.push(`/${routes.expandedRecipe}`);
+        props.history.push(
+          path.expanded.replace(":{recipeName}", props.recipeName)
+        );
       }}
     >
       <div className={styles.recipeInfoContainer}>

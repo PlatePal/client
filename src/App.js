@@ -10,8 +10,11 @@ import Navbar from "./component/navbars/Navbar.js";
 import { ThemeProvider } from "@material-ui/core";
 import mainUITheme from "./assets/styles/mainUITheme";
 import "fontsource-roboto";
-import routes from "./constant/routes";
+import path from "./constant/routes";
 import ExpandedSavedRecipe from "./Containers/Pages/ExpandedSavedRecipe/ExpandedSavedRecipe";
+import IngredientSelection from "./Containers/Pages/IngredientSelection/IngredientSelection";
+import DietaryRestrictions from "./Containers/Pages/DietaryRestrictions/DietaryRestrictions";
+import Metrics from "./Containers/Pages/Metrics/Metrics";
 
 function App() {
   return (
@@ -19,16 +22,7 @@ function App() {
       <ThemeProvider theme={mainUITheme}>
         <Switch>
           <Route
-            path={`/${routes.main}`}
-            render={(props) => (
-              <div>
-                <Navbar fill="home" />
-                <MainRecipeModal />
-              </div>
-            )}
-          />
-          <Route
-            path={`/${routes.today}`}
+            path={path.today}
             render={(props) => (
               <div>
                 <Navbar fill="bookmark" />
@@ -37,16 +31,33 @@ function App() {
             )}
           />
           <Route
-            path={`/${routes.profile}`}
+            path={path.ingredients}
+            exact
             render={(props) => (
               <div>
-                <Navbar fill="person" />
-                <ProfilePage />
+                <IngredientSelection />
               </div>
             )}
           />
           <Route
-            path={`/${routes.favorite}`}
+            path={path.diet}
+            exact
+            render={(props) => (
+              <div>
+                <DietaryRestrictions />
+              </div>
+            )}
+          />
+          <Route
+            path={path.metric}
+            render={(props) => (
+              <div>
+                <Metrics />
+              </div>
+            )}
+          />
+          <Route
+            path={path.saved}
             render={(props) => (
               <div>
                 <Navbar fill="heart" />
@@ -55,16 +66,36 @@ function App() {
             )}
           />
           <Route
-            path={`/${routes.expandedRecipe}`}
+            path={path.expanded}
             render={(props) => (
               <div>
-                <Navbar fill="home" />
+                <Navbar fill="bookmark" />
                 <ExpandedSavedRecipe />
               </div>
             )}
           />
+
+          <Route
+            path={path.profile}
+            render={(props) => (
+              <div>
+                <Navbar fill="person" />
+                <ProfilePage />
+              </div>
+            )}
+          />
+
+          <Route
+            path={path.main}
+            render={(props) => (
+              <div>
+                <Navbar fill="home" />
+                <MainRecipeModal />
+              </div>
+            )}
+          />
           <Redirect from="/:random" to="/" />
-          <Route path="/" component={LandingPage} />
+          <Route path="/" exact component={LandingPage} />
         </Switch>
       </ThemeProvider>
     </BrowserRouter>

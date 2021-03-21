@@ -1,17 +1,28 @@
 const routes = {
+  app: "app",
   login: "login",
   main: "main",
   profile: "profile",
   today: "today",
 
   // User preference related
-  dietaryRestriction: "dietaryRestriction",
+  diet: "diet",
   metrics: "metrics",
   expandedRecipe: "expandedRecipe",
-  ingredientSelection: "ingredientSelection",
-  expandedSavedRecipe: "expandedSavedRecipe",
-  adjustOptions: "adjustOptions",
+  ingredients: "ingredients",
   favorite: "favorite",
 };
 
-export default routes;
+const path = {
+  main: `/${routes.app}`,
+  today: `/${routes.app}/${routes.today}`,
+  profile: `/${routes.app}/${routes.profile}`,
+  ingredients: `/${routes.app}/${routes.profile}/${routes.ingredients}`,
+  diet: `/${routes.app}/${routes.profile}/${routes.diet}`,
+  metric: `/${routes.app}/${routes.profile}/${routes.metrics}`,
+  saved: `/${routes.app}/${routes.favorite}`,
+  expanded: `/${routes.app}/${routes.expandedRecipe}/:{recipeName}`,
+  login: `/`,
+};
+
+export default path;

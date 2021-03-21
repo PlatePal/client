@@ -111,6 +111,7 @@ class TodaysRecipe extends React.Component {
       : null;
     return (
       <div className={styles.fullPage}>
+        <h2 className={styles.label}>Today's Recipes</h2>
         {this.state.loading && "loading"}
         {compressedRecipeCollection}
       </div>

@@ -7,8 +7,12 @@ const NavItem = (props) => {
   const route = props.route;
 
   const routeChange = (path) => {
-    if (path === "/back") history.goBack();
-    else history.push(path);
+    console.log(path);
+    if (path === "back") {
+      history.goBack();
+    } else {
+      history.push(path);
+    }
   };
 
   return (
@@ -16,7 +20,7 @@ const NavItem = (props) => {
       type="image"
       className={styles.navButton}
       src={props.image}
-      onClick={() => routeChange("/" + route)}
+      onClick={() => routeChange(route)}
       alt={"nav tab"}
     ></input>
   );
