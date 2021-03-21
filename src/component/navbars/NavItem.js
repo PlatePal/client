@@ -7,7 +7,6 @@ const NavItem = (props) => {
   const route = props.route;
 
   const routeChange = (path) => {
-    console.log(path);
     if (path === "back") {
       history.goBack();
     } else {

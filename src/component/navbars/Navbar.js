@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.scss";
 import NavItem from "./NavItem";
 import arrow from "../../assets/images/arrow.svg";
@@ -13,8 +13,11 @@ import homeFilled from "../../assets/images/home_filled.svg";
 import personFilled from "../../assets/images/person_filled.svg";
 import bookmarkFilled from "../../assets/images/bookmark_filled.svg";
 import path from "../../constant/routes";
+import AdjustOptions from "../AdjustOptions/AdjustOptions";
 
 const Navbar = (props) => {
+  const [showFilter, setShowFilter] = useState(false);
+
   const checkPage = (page) => {
     if (props.fill === page) {
       if (page === "home") return homeFilled;
@@ -26,10 +29,23 @@ const Navbar = (props) => {
 
   return (
     <div>
+      {showFilter && (
+        <div className={styles.modal} onClick={() => setShowFilter(false)}>
+          <AdjustOptions />
+        </div>
+      )}
       <div className={styles.topNavContainer}>
         <NavItem image={arrow} route="back" />
         <NavItem image={platepal} route={path.login} />
-        <NavItem image={menu} route={path.metrics} />
+        <input
+          type="image"
+          className={styles.navButton}
+          src={menu}
+          onClick={() => {
+            setShowFilter(true);
+          }}
+          alt={"nav tab"}
+        />
       </div>
       <div className={styles.bottomNavContainer}>
         <NavItem image={checkPage("home") || home} route={path.main} />
