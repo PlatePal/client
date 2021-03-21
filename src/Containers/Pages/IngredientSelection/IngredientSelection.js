@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Button } from "@material-ui/core";
 import { useStyles } from "../../../assets/styles/ingredientSelectionClasses";
-import OptionChips from "../../../component/OptionChips/OptionChips";
 import {
   addDairyOption,
   addProduceOption,

@@ -16,11 +16,11 @@ import routes from "../../constant/routes";
 
 const Navbar = (props) => {
   const checkPage = (page) => {
-    if (props.fill == page) {
-      if (page == "home") return homeFilled;
-      if (page == "heart") return heartFilled;
-      if (page == "bookmark") return bookmarkFilled;
-      if (page == "person") return personFilled;
+    if (props.fill === page) {
+      if (page === "home") return homeFilled;
+      if (page === "heart") return heartFilled;
+      if (page === "bookmark") return bookmarkFilled;
+      if (page === "person") return personFilled;
     }
   };
 

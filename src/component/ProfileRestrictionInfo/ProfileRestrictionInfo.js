@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './ProfileRestrictionInfo.module.scss';
-import add_button from '../../assets/images/add_preference_button.svg';
+import React from "react";
+import styles from "./ProfileRestrictionInfo.module.scss";
+import add_button from "../../assets/images/add_preference_button.svg";
 
 const ProfileRestrictionInfo = (props) => {
   return (
@@ -16,8 +16,8 @@ const ProfileRestrictionInfo = (props) => {
             </li>
           );
         })}
-        <li key='addMore'>
-          <img src={add_button} alt='plus symbol'></img>
+        <li key="addMore">
+          <img src={add_button} alt="plus symbol"></img>
         </li>
       </ul>
     </div>
