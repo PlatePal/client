@@ -10,7 +10,7 @@ import dairyImage from "../../../assets/images/Dairy.jpg";
 import produceImage from "../../../assets/images/Produce.jpg";
 import bakingImage from "../../../assets/images/Baking.png";
 import { withRouter } from "react-router";
-import routes from "../../../constant/routes";
+import path from "../../../constant/routes";
 import OptionSelection from "../../../component/OptionSelection/OptionSelection";
 
 const IngredientSelection = (props) => {
@@ -109,7 +109,11 @@ const IngredientSelection = (props) => {
             addDairyOption(filterItem(dairyOptions));
             addProduceOption(filterItem(produceOptions));
             addBakingOption(filterItem(bakingOptions));
-            props.history.push(`/${routes.metrics}`);
+            if (props.nextOnClick) {
+              props.nextOnClick();
+            } else {
+              props.history.push(path.metric);
+            }
           }}
         >
           Next

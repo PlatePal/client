@@ -7,6 +7,7 @@ import { addAllergy, addSpecialDiet } from "../../../utilities/firebase/index";
 import { withRouter } from "react-router";
 import routes from "../../../constant/routes";
 import OptionSelection from "../../../component/OptionSelection/OptionSelection";
+import path from "../../../constant/routes";
 
 const DietaryRestrictions = (props) => {
   const styles = useStyles();
@@ -68,7 +69,7 @@ const DietaryRestrictions = (props) => {
           onClick={() => {
             addAllergy(filterItem(allergies));
             addSpecialDiet(filterItem(diets));
-            props.history.push(`/${routes.metrics}`);
+            props.history.push(path.profile);
           }}
         >
           Next

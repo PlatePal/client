@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import Slider from "../Slider/Slider.js";
 import GroupOfButtons from "../ButtonGroup/GroupOfButtons.js";
 import InfoButton from "../moreInfoButton/InfoButton.js";
 import { useStyles } from "../../assets/styles/AdjustOptionsClasses.js";
+import { withRouter } from "react-router";
+import IngredientSelection from "../../Containers/Pages/IngredientSelection/IngredientSelection.js";
+import styles from "./AdjustOptions.module.scss";
 
-const AdjustOptions = () => {
+const AdjustOptions = (props) => {
   const classes = useStyles();
+  const [showIngredientSelection, setShowIngredientSelection] = useState(false);
 
   const timeMarks = [
     { value: 10, label: "10 min" },
@@ -30,6 +35,18 @@ const AdjustOptions = () => {
     { label: "$$$", selected: false },
   ]);
 
+  const renderIngredientsPage = () => {
+    const root = document.getElementById("root");
+    return ReactDOM.createPortal(
+      <div className={styles.ingredientsDiv}>
+        <IngredientSelection
+          nextOnClick={() => setShowIngredientSelection(false)}
+        />
+      </div>,
+      root
+    );
+  };
+
   return (
     <div
       className={classes.root}
@@ -38,9 +55,16 @@ const AdjustOptions = () => {
         event.stopPropagation();
       }}
     >
+      {showIngredientSelection && renderIngredientsPage()}
       <GroupOfButtons options={meals} setOptions={setMeals} />
       <GroupOfButtons options={costs} setOptions={setCost} />
-      <InfoButton buttonName="Ingredients" colour="#FFD275" />
+      <InfoButton
+        buttonName="Ingredients"
+        colour="#FFD275"
+        onClick={() => {
+          setShowIngredientSelection(true);
+        }}
+      />
       <Slider
         marks={timeMarks}
         default={50}
@@ -59,4 +83,4 @@ const AdjustOptions = () => {
     </div>
   );
 };
-export default AdjustOptions;
+export default withRouter(AdjustOptions);

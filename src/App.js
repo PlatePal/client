@@ -31,15 +31,6 @@ function App() {
             )}
           />
           <Route
-            path={path.ingredients}
-            exact
-            render={(props) => (
-              <div>
-                <IngredientSelection />
-              </div>
-            )}
-          />
-          <Route
             path={path.diet}
             exact
             render={(props) => (

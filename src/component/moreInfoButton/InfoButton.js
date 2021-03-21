@@ -39,7 +39,13 @@ const InfoButton = (props) => {
         <Grid item className={classes.buttonContainer}>
           <Typography className={classes.name}>{props.buttonName}</Typography>
           {/* button to click for more options */}
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              if (props.onClick) {
+                props.onClick();
+              }
+            }}
+          >
             <AddCircleOutlineIcon />
           </IconButton>
         </Grid>
