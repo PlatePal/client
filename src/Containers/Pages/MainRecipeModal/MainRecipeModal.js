@@ -53,16 +53,11 @@ class MainRecipeModal extends React.Component {
   }
 
   moveToNext() {
-    this.setState(
-      (prevState) => {
-        return {
-          recipeCount: prevState.recipeCount + 1,
-        };
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState((prevState) => {
+      return {
+        recipeCount: prevState.recipeCount + 1,
+      };
+    });
     if (this.state.recipeCount >= 20) this.callAPI();
     else this.updateRecipe(this.state.resp);
   }
